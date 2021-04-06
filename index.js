@@ -3,7 +3,10 @@ const style = require('ansi-styles')
 
 const server = http.createServer((request, response) => {
   response.write('hello world');
-  response.end();
+  response.end('...');
 })
 
-// console.log(`${style.bgCyan.open}Hello world!${style.green.close}`);
+server.listen(3000, 'localhost', () => {
+  console.log('Server has started on localhost:3000')
+})
+
